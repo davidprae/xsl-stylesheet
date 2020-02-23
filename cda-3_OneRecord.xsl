@@ -133,53 +133,52 @@ limitations under the License.
         <xsl:call-template name="lantana-css"/>
         <!-- END ONERECORD CUSTOMIZATION -->
       </head>
-      <body data-spy="scroll" data-target="#navbar-cda" class="container-fluid">
+      <body data-spy="scroll" data-target="#navbar-cda" class="container-fluid cda-render">
 
-        <div class="cda-render toc col-md-3" role="complementary">
-
-          <!-- produce table of contents -->
-          <xsl:if test="not(//n1:nonXMLBody)">
-            <xsl:if test="count(/n1:ClinicalDocument/n1:component/n1:structuredBody/n1:component[n1:section]) &gt; 0">
-              <xsl:call-template name="make-tableofcontents"/>
+        <div class="row">
+          <aside class="cda-render toc col-md-3" role="complementary">
+            <!-- produce table of contents -->
+            <xsl:if test="not(//n1:nonXMLBody)">
+              <xsl:if test="count(/n1:ClinicalDocument/n1:component/n1:structuredBody/n1:component[n1:section]) &gt; 0">
+                <xsl:call-template name="make-tableofcontents"/>
+              </xsl:if>
             </xsl:if>
-          </xsl:if>
-        </div>
+          </aside>
 
         <!-- Container: CDA Render -->
-        <div class="cda-render  col-md-9 cda-render-main" role="main">
+          <main class="col-md-9" role="main">
 
-          <row>
             <!-- BEGIN ONERECORD CUSTOMIZATION -->
             <!--<h1 id="top" class="cda-title">-->
             <h1 id="top">
             <!-- END ONERECORD CUSTOMIZATION -->
               <xsl:value-of select="$title"/>
             </h1>
-          </row>
-          <!-- START display top portion of clinical document -->
-          <div class="top ">
-            <xsl:call-template name="recordTarget"/>
-            <xsl:call-template name="documentationOf"/>
-            <xsl:call-template name="author"/>
-            <xsl:call-template name="componentOf"/>
-            <xsl:call-template name="participant"/>
-            <xsl:call-template name="informant"/>
-            <xsl:call-template name="informationRecipient"/>
-            <xsl:call-template name="legalAuthenticator"/>
-          </div>
-          <!-- END display top portion of clinical document -->
+            <!-- START display top portion of clinical document -->
+            <div class="top ">
+              <xsl:call-template name="recordTarget"/>
+              <xsl:call-template name="documentationOf"/>
+              <xsl:call-template name="author"/>
+              <xsl:call-template name="componentOf"/>
+              <xsl:call-template name="participant"/>
+              <xsl:call-template name="informant"/>
+              <xsl:call-template name="informationRecipient"/>
+              <xsl:call-template name="legalAuthenticator"/>
+            </div>
+            <!-- END display top portion of clinical document -->
 
-          <!-- produce human readable document content -->
-          <div class="middle" id="doc-clinical-info">
-            <xsl:apply-templates select="n1:component/n1:structuredBody | n1:component/n1:nonXMLBody"/>
-          </div>
-          <!-- Footer -->
-          <div class="bottom" id="doc-info">
-            <xsl:call-template name="authenticator"/>
-            <xsl:call-template name="custodian"/>
-            <xsl:call-template name="dataEnterer"/>
-            <xsl:call-template name="documentGeneral"/>
-          </div>
+            <!-- produce human readable document content -->
+            <div class="middle" id="doc-clinical-info">
+              <xsl:apply-templates select="n1:component/n1:structuredBody | n1:component/n1:nonXMLBody"/>
+            </div>
+            <!-- Footer -->
+            <div class="bottom" id="doc-info">
+              <xsl:call-template name="authenticator"/>
+              <xsl:call-template name="custodian"/>
+              <xsl:call-template name="dataEnterer"/>
+              <xsl:call-template name="documentGeneral"/>
+            </div>
+          </main>
         </div>
 
       </body>
