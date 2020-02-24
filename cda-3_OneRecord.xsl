@@ -684,7 +684,7 @@ limitations under the License.
                       </xsl:call-template>
                     </h2>
                   </div>
-                  <div class="header-group-content col-md-8">
+                  <div class="header-group-content">
                     <xsl:call-template name="show-code">
                       <xsl:with-param name="code" select="n1:serviceEvent/n1:code"/>
                     </xsl:call-template>
@@ -2968,12 +2968,6 @@ limitations under the License.
         font-weight:bold;
       }
 
-     /* Patient ID Formatting */
-     .patient-id {
-       border-left-width: 0.15em;
-       border-left-style: solid;
-       border-left-color: #478B95;
-     }
       /* Re-usable - Section-Title */
       .cda-render .section-title {
         color:#336b7a;
@@ -2999,14 +2993,6 @@ limitations under the License.
           padding-bottom: 2rem;
           margin-bottom: 2rem;
           margin-top: 2rem;
-      }
-
-      .cda-render .header-group-content{
-          margin-left:1em;
-          padding-left:0.5em;
-          border-left-width:0.15em;
-          border-left-style:solid;
-          border-left-color:#478B95;
       }
 
       .cda-render .tight{
