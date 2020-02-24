@@ -146,16 +146,16 @@ limitations under the License.
           </aside>
 
         <!-- Container: CDA Render -->
-          <main class="col-md-8" role="main">
+          <main id="main" class="col-md-8" role="main">
 
             <!-- BEGIN ONERECORD CUSTOMIZATION -->
             <!--<h1 id="top" class="cda-title">-->
-            <h1 id="top">
+            <h1>
             <!-- END ONERECORD CUSTOMIZATION -->
               <xsl:value-of select="$title"/>
             </h1>
             <!-- START display top portion of clinical document -->
-            <div class="top ">
+            <div>
               <xsl:call-template name="recordTarget"/>
               <xsl:call-template name="documentationOf"/>
               <xsl:call-template name="author"/>
@@ -213,7 +213,7 @@ limitations under the License.
       </div>
       <ul class="cda-render nav nav-stacked" id="navbar-list-cda">
         <li>
-          <a class="cda-render lantana-toc" href="#top">BACK TO TOP</a>
+          <a class="cda-render lantana-toc" href="#main">BACK TO TOP</a>
         </li>
         <li>
           <a class="cda-render lantana-toc" href="#cda-patient">DEMOGRAPHICS</a>
@@ -960,13 +960,13 @@ limitations under the License.
       <xsl:for-each select="/n1:ClinicalDocument/n1:recordTarget/n1:patientRole">
         <xsl:if test="not(n1:id/@nullFlavor)">
           <div class="patient-heading ">
-            <div class="patient-name row">
+            <div class="patient-name">
               <xsl:call-template name="show-name">
                 <xsl:with-param name="name" select="n1:patient/n1:name"/>
               </xsl:call-template>
             </div>
-            <div class="patient-identifier ">
-              <div class="attribute-title row">Patient Identifiers</div>
+            <div class="patient-identifier">
+              <div class="attribute-title">Patient Identifiers</div>
               <xsl:for-each select="n1:id">
                 <div class="row">
                   <div class="col-md-6 patient-id">
@@ -2949,7 +2949,6 @@ limitations under the License.
       }
 
       .cda-render .toc {
-        margin-top:3em;
         padding: 0px 15px;
       }
 
