@@ -136,7 +136,7 @@ limitations under the License.
       <body data-spy="scroll" data-target="#navbar-cda" class="container-fluid cda-render">
 
         <div class="row">
-          <aside class="cda-render toc col-md-3" role="complementary">
+          <aside class="cda-render toc col-md-4" role="complementary">
             <!-- produce table of contents -->
             <xsl:if test="not(//n1:nonXMLBody)">
               <xsl:if test="count(/n1:ClinicalDocument/n1:component/n1:structuredBody/n1:component[n1:section]) &gt; 0">
@@ -146,7 +146,7 @@ limitations under the License.
           </aside>
 
         <!-- Container: CDA Render -->
-          <main class="col-md-9" role="main">
+          <main class="col-md-8" role="main">
 
             <!-- BEGIN ONERECORD CUSTOMIZATION -->
             <!--<h1 id="top" class="cda-title">-->
@@ -192,7 +192,7 @@ limitations under the License.
   <xsl:template xmlns:n1="urn:hl7-org:v3" xmlns:in="urn:lantana-com:inline-variable-data" name="make-tableofcontents">
 
     <nav class="cda-render hidden-print hidden-xs hidden-sm affix toc-box" id="navbar-cda">
-      <div class="row cda-render toc-header-container">
+      <div class="cda-render toc-header-container">
         <xsl:if test="$logo-location">
           <div class="col-md-1">
             <img src="logo.png" class="img-responsive" alt="Logo">
