@@ -968,18 +968,16 @@ limitations under the License.
             <div class="patient-identifier">
               <div class="attribute-title">Patient Identifiers</div>
               <xsl:for-each select="n1:id">
-                <div class="row">
-                  <div class="col-md-6 patient-id">
-                    <xsl:call-template name="show-id"/>
-                  </div>
+                <div class="patient-id">
+                  <xsl:call-template name="show-id"/>
                 </div>
               </xsl:for-each>
             </div>
           </div>
-          <div class="patient-info ">
+          <div class="patient-info row">
             <div class="col-md-6">
-              <h2 class="section-title col-md-6">About</h2>
-              <div class="header-group-content col-md-8">
+              <h2 class="section-title">About</h2>
+              <div class="header-group-content">
                 <div class="row">
                   <div class="attribute-title col-md-6">
                     <xsl:text>Date of Birth</xsl:text>
@@ -1043,10 +1041,10 @@ limitations under the License.
               </div>
             </div>
             <div class="col-md-6">
-              <h2 class="section-title col-md-6">
+              <h2 class="section-title">
                 <xsl:text>Contact</xsl:text>
               </h2>
-              <div class="header-group-content col-md-8">
+              <div class="header-group-content">
                 <xsl:call-template name="show-contactInfo">
                   <xsl:with-param name="contact" select="."/>
                 </xsl:call-template>
