@@ -2979,6 +2979,7 @@ limitations under the License.
         color:#336b7a;
         font-size:1.09em;
         font-weight:bold;
+        margin-top: 2rem;
         text-transform: uppercase;
       }
 
@@ -2995,7 +2996,9 @@ limitations under the License.
           border-bottom-width:0.1em;
           border-bottom-style:solid;
           border-bottom-color:#1B6373;
-          padding-bottom:0.5em;
+          padding-bottom: 2rem;
+          margin-bottom: 2rem;
+          margin-top: 2rem;
       }
 
       .cda-render .header-group-content{
