@@ -1057,18 +1057,18 @@ limitations under the License.
       <xsl:if test="n1:participant">
         <xsl:for-each select="n1:participant">
           <xsl:if test="n1:associatedEntity/@classCode = 'ECON'">
-            <div class="" id="emergency-contact">
+            <div class="row" id="emergency-contact">
               <div class="col-md-6">
-                <h2 class="section-title col-md-6">Emergency Contact</h2>
-                <div class="header-group-content col-md-8">
+                <h2 class="section-title">Emergency Contact</h2>
+                <div class="header-group-content">
                   <xsl:call-template name="show-associatedEntity">
                     <xsl:with-param name="assoEntity" select="n1:associatedEntity"/>
                   </xsl:call-template>
                 </div>
               </div>
               <div class="col-md-6">
-                <h2 class="section-title col-md-6">Contact</h2>
-                <div class="header-group-content col-md-8">
+                <h2 class="section-title">Contact</h2>
+                <div class="header-group-content">
                   <xsl:call-template name="show-contactInfo">
                     <xsl:with-param name="contact" select="n1:associatedEntity"/>
                   </xsl:call-template>
@@ -1083,18 +1083,18 @@ limitations under the License.
       <xsl:if test="n1:participant">
         <xsl:for-each select="n1:participant">
           <xsl:if test="n1:associatedEntity/@classCode = 'NOK'">
-            <div class="" id="emergency-contact">
+            <div class="row" id="emergency-contact">
               <div class="col-md-6">
-                <h2 class="section-title col-md-6">Next of Kin</h2>
-                <div class="header-group-content col-md-8">
+                <h2 class="section-title">Next of Kin</h2>
+                <div class="header-group-content">
                   <xsl:call-template name="show-associatedEntity">
                     <xsl:with-param name="assoEntity" select="n1:associatedEntity"/>
                   </xsl:call-template>
                 </div>
               </div>
               <div class="col-md-6">
-                <h2 class="section-title col-md-6">Contact</h2>
-                <div class="header-group-content col-md-8">
+                <h2 class="section-title">Contact</h2>
+                <div class="header-group-content">
                   <xsl:call-template name="show-contactInfo">
                     <xsl:with-param name="contact" select="n1:associatedEntity"/>
                   </xsl:call-template>
